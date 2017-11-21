@@ -3,6 +3,9 @@ language: cpp
 notifications:
   email: false
 
+install:
+  - sh autogen.sh
+
 script:   
 - cmake -H. -B_build
 - cmake --build _build
