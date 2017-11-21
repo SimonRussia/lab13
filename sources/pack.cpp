@@ -27,17 +27,17 @@ int main(int argc, char const *argv[]) {
 		//  Create struct & fill it
 		Person A;
 
-		cout << "Enter data to fields of the Person structure." << endl;
-		cout << "First name:" << endl;
-		cin >> A.first_name;
-		cout << "Last name:" << endl;
-		cin >> A.last_name;
-		cout << "Email:" << endl;
+		std::cout << "Enter data to fields of the Person structure." << std::endl;
+		std::cout << "First name:" << std::endl;
+		std::cin >> A.first_name;
+		std::cout << "Last name:" << std::endl;
+		std::cin >> A.last_name;
+		std::cout << "Email:" << std::endl;
 		A.devideEmail();
-		cout << "Age(optional):" << endl;
-		cin >> A.age;
-		cout << "Phone(optional):" << endl;
-		cin >> A.phone;
+		std::cout << "Age(optional):" << std::endl;
+		std::cin >> A.age;
+		std::cout << "Phone(optional):" << std::endl;
+		std::cin >> A.phone;
 
 
 		// json j;
@@ -58,7 +58,7 @@ int main(int argc, char const *argv[]) {
 		out.close();
 
 	} catch(const std::exception& e) {
-        cout << e.what() << endl;
+        std::cout << e.what() << std::endl;
     }
 
 	return 0;
@@ -66,7 +66,7 @@ int main(int argc, char const *argv[]) {
 
 void Person::devideEmail() {
   	std::string address;
-  	cin >> address;
+  	std::cin >> address;
   	std::string::size_type pos = address.find("@");
 	if(pos != std::string::npos) {
 		email.nickname = address.substr(0, pos);
