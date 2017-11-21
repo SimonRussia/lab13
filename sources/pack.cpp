@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iomanip> // for std::setw
 
-// using json = nlohmann::json;
+using json = nlohmann::json;
 
 struct Email {
   std::string nickname;
@@ -27,17 +27,17 @@ int main(int argc, char const *argv[]) {
 		//  Create struct & fill it
 		Person A;
 
-		std::cout << "Enter data to fields of the Person structure." << std::endl;
-		std::cout << "First name:" << std::endl;
-		std::cin >> A.first_name;
-		std::cout << "Last name:" << std::endl;
-		std::cin >> A.last_name;
-		std::cout << "Email:" << std::endl;
+		cout << "Enter data to fields of the Person structure." << endl;
+		cout << "First name:" << endl;
+		cin >> A.first_name;
+		cout << "Last name:" << endl;
+		cin >> A.last_name;
+		cout << "Email:" << endl;
 		A.devideEmail();
-		std::cout << "Age(optional):" << std::endl;
-		std::cin >> A.age;
-		std::cout << "Phone(optional):" << std::endl;
-		std::cin >> A.phone;
+		cout << "Age(optional):" << endl;
+		cin >> A.age;
+		cout << "Phone(optional):" << endl;
+		cin >> A.phone;
 
 
 		// json j;
@@ -58,7 +58,7 @@ int main(int argc, char const *argv[]) {
 		out.close();
 
 	} catch(const std::exception& e) {
-        std::cout << e.what() << std::endl;
+        cout << e.what() << endl;
     }
 
 	return 0;
@@ -66,7 +66,7 @@ int main(int argc, char const *argv[]) {
 
 void Person::devideEmail() {
   	std::string address;
-  	std::cin >> address;
+  	cin >> address;
   	std::string::size_type pos = address.find("@");
 	if(pos != std::string::npos) {
 		email.nickname = address.substr(0, pos);
