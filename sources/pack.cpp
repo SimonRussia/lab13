@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iomanip> // for std::setw
 
-using json = nlohmann::json;
+// using json = nlohmann::json;
 
 struct Email {
   std::string nickname;
