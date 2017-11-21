@@ -1,6 +1,4 @@
 #include <json/json.h>
-#include <valijson/adapters/jsoncpp_adapter.hpp>
-#include <valijson/utils/jsoncpp_utils.hpp>
 #include <iostream>
 #include <fstream>
 #include <iomanip> // for std::setw
