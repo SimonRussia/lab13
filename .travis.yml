@@ -16,12 +16,6 @@ matrix:
           packages: ['g++-7']
       env: CXX_EVAL="g++-7" CC_EVAL="gcc-7" BUILD_TYPE='Release'
 
-    - os: linux
-      compiler: gcc
-      addons: *gcc7
-      env: CXX_EVAL="g++-7" CC_EVAL="gcc-7" BUILD_TYPE='Debug'
-
-
 script:   
 - cmake -H. -B_build
 - cmake --build _build
