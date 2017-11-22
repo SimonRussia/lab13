@@ -1,9 +1,10 @@
-#include <json/json.h>
+// #include <json/json.h>
+#include <nlohmann/json.hpp>
 #include <iostream>
 #include <fstream>
 #include <iomanip> // for std::setw
 
-// using json = nlohmann::json;
+using json = nlohmann::json;
 
 struct Email {
   std::string nickname;
