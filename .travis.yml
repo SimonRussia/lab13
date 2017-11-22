@@ -3,6 +3,18 @@ language: cpp
 notifications:
   email: false
 
+matrix:
+  include:
+  
+  - os: linux
+      compiler: gcc
+      env: COMPILER=g++-4.9
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-4.9', 'ninja-build']
+
+
 script:   
 - cmake -H. -B_build
 - cmake --build _build
