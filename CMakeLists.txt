@@ -14,8 +14,11 @@ project(json)
 hunter_add_package(jsoncpp)
 find_package(jsoncpp CONFIG REQUIRED)
 
+hunter_add_package(nlohmann_json)
+find_package(nlohmann_json CONFIG REQUIRED)
+
 add_executable(pack ${CMAKE_CURRENT_SOURCE_DIR}/sources/pack.cpp)
-target_link_libraries(pack jsoncpp_lib_static)
+target_link_libraries(pack jsoncpp_lib_static nlohmann_json)
 
 add_executable(unpack ${CMAKE_CURRENT_SOURCE_DIR}/sources/unpack.cpp)
-target_link_libraries(unpack jsoncpp_lib_static)
+target_link_libraries(unpack jsoncpp_lib_static nlohmann_json)
