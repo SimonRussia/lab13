@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/ovan-iu8/lab13.svg?branch=master)](https://travis-ci.org/ovan-iu8/lab13) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
 ## Laboratory work XIII
 
-Данная лабораторная работа посвещена изучению процесса парсинга **web**-ресурсов с применением **CURL**
+Данная лабораторная работа посвещена изучению серелизации и десерелизации **JSON** файлов
 
 ## Задание
 
