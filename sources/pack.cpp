@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
 
 		//  Create struct & fill it
 		Person A;
-
+		/*
 		std::cout << "Enter data to fields of the Person structure." << std::endl;
 		std::cout << "First name:" << std::endl;
 		std::cin >> A.first_name;
@@ -40,6 +40,25 @@ int main(int argc, char const *argv[]) {
 		std::cin >> A.age;
 		std::cout << "Phone(optional):" << std::endl;
 		std::cin >> A.phone;
+		*/
+		
+		//  code for Travis CI
+		std::cout << "Enter data to fields of the Person structure." << std::endl;
+		std::cout << "First name:" << std::endl;
+		A.first_name = "Petr";
+		std::cout << "Petr" << std::endl;
+		std::cout << "Last name:" << std::endl;
+		A.last_name = "Ivanov";
+		std::cout << "Ivanov" << std::endl;
+		std::cout << "Email:" << std::endl;
+		A.devideEmail();
+		std::cout << "ivanov_petr_97@gmail.com" << std::endl;
+		std::cout << "Age(optional):" << std::endl;
+		A.age = "20";
+		std::cout << "20" << std::endl;
+		std::cout << "Phone(optional):" << std::endl;
+		A.phone = "+0(123)-000-12-34";
+		std::cout << "+0(123)-000-12-34" << std::endl;
 
 
 		// json j;
@@ -49,7 +68,7 @@ int main(int argc, char const *argv[]) {
 			  { "Fisrt name",	A.first_name },
 			  { "Last name",	A.last_name },
 			  { "Email",		A.email.nickname + A.email.server },
-			  { "Age",			A.age },
+			  { "Age",		A.age },
 			  { "Phone",		A.phone }
 			}
 		};
@@ -67,8 +86,8 @@ int main(int argc, char const *argv[]) {
 }
 
 void Person::devideEmail() {
-  	std::string address;
-  	std::cin >> address;
+  	std::string address = "ivanov_petr_97@gmail.com";
+  	// std::cin >> address;
   	std::string::size_type pos = address.find("@");
 	if(pos != std::string::npos) {
 		email.nickname = address.substr(0, pos);
