@@ -54,7 +54,7 @@ int main(int argc, char const *argv[]) {
 		A.devideEmail();
 		std::cout << "ivanov_petr_97@gmail.com" << std::endl;
 		std::cout << "Age(optional):" << std::endl;
-		A.age = "20";
+		A.age = 20;
 		std::cout << "20" << std::endl;
 		std::cout << "Phone(optional):" << std::endl;
 		A.phone = "+0(123)-000-12-34";
