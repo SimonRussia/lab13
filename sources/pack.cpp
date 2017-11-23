@@ -63,13 +63,12 @@ int main(int argc, char const *argv[]) {
 		// json j;
 		// j["Fisrt name"] = A.first_name;
 
-		json j = { "[person]", {
+		json j = {
 			  { "Fisrt name",	A.first_name },
 			  { "Last name",	A.last_name },
 			  { "Email",		A.email.nickname + A.email.server },
 			  { "Age",		A.age },
 			  { "Phone",		A.phone }
-			}
 		};
 
 		// write prettified JSON to another file
